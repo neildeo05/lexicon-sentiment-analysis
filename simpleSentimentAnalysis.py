@@ -23,12 +23,12 @@ with open('pos.txt', 'r') as positiveFile:
         #removes linebreaks
         currentPlace = line[:-1]
         #appends all positive words into positive list
-        positive.append(currentPlace)
+        positiveWords.append(currentPlace)
 
 with open('neg.txt', 'r') as negativeFile:
     for line in negativeFile:
         currentPlace = line[:-1]
-        negative.append(currentPlace)
+        negativeWords.append(currentPlace)
 
 
 getSentence = raw_input("Give me sentence  ")
@@ -37,10 +37,10 @@ sentenceList = getSentence.split()
 
 #iterates through the words in the sentence, and checks if they are either positive or negative
 for i in sentenceList:
-    if i in positive:
+    if i in positiveWords:
         cntPos+=1
         print (i)
-    if i in negative:
+    if i in negativeWords:
         cntNeg -= 1
         print (i)
 
