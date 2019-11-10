@@ -48,5 +48,7 @@ for i in sentenceList:
 overallScore = cntPos + cntNeg
 if (overallScore < 0):
     print("Neg ", str(overallScore))
-else:
+elif (overallScore > 0):
     print("Pos " + str(overallScore))
+else:
+    print("Neutral " + str(overallScore))
